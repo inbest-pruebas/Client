@@ -6,5 +6,10 @@
                 <div>Client: <t t-esc='receipt.client.name' /></div>
             </t>
     	</xpath>
+        <xpath expr="//div[@class='pos-receipt-contact']" position="inside">
+    		<t t-if='receipt.company.street'>
+                <div>Address: <t t-esc='receipt.company.street' /></div>
+            </t>
+    	</xpath>
     </t>
 </templates>
